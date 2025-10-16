@@ -88,3 +88,4 @@ Designed for a clean, intuitive, and user-friendly experience.
 **Developed by:** Kristina Hyaunmkiha  
 ✨ Simple project built with learning and creativity in mind.
 
+![alt text](image.png)
