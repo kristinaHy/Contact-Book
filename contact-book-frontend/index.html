@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📒 Contact Book</h1>
+
+        <!-- contact form -->
+        <section id="form-section">
+            <h2>Add Contact</h2>
+            <p id="form-note">Add a new contact</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="phone" placeholder="Phone" required>
+                <input type="text" id="address" placeholder="Address"required>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Search & Ordering -->
+        <section id="controls-section">
+            <input type="text" id="searchInput" placeholder="Search by name or Address">
+            <select id ="orderSelect">
+                <option value="">Order by...</option>
+                <option value="name">Name Asc</option>
+                <option value="-name">Name Desc</option>
+                <option value="address">Address Asc</option>
+                <option value="-address">Address Desc</option>
+            </select>
+        </section>
+
+        <!--Contact list -->
+        <section id ="list-section">
+            <h2>Contacts</h2>
+            <ol id="contactList" class="contact-list"></ol>
+            <div id="pagination" class="pagination">
+                <button id="prevPage" class="btn-page">Previous</button>
+                <span id ="pageInfo">
+                    Page 1
+                </span>
+                <button id="nextPage" class="btn-page">Next</button>
+            </div>
+        </section>
+       
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

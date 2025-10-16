@@ -1,0 +1,184 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #84badb; /* soft cool background */
+  color:rgb(1, 12, 24)
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1f3a50;
+}
+
+#form-section, #controls-section, #list-section {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 8px 12px;
+  margin: 5px 5px 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 200px;
+  background: #f1f5f8;
+  color: #2c3e50;
+}
+
+/* Buttons with distinct colors */
+.btn-submit {
+  background: green;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background: rgb(26, 155, 26);
+}
+
+.btn-edit {
+  background: teal;
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background: green;
+}
+
+.btn-delete {
+  background: rgb(201, 33, 33);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #e0220d;
+}
+
+.btn-page {
+  background: rgb(21, 112, 143);
+  color: white;
+}
+
+.btn-page:hover {
+  background: rgb(11, 157, 206);
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  counter-reset: sn;
+  padding-left: 0;
+}
+
+.contact-item {
+    display: flex;                 /* enable flex layout */
+  justify-content: space-between; /* contact info left, buttons right */
+ 
+  position: flex;
+  background: #f7fafc;
+  padding: 15px 20px 15px 50px; /* space for numbering */
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 6px solid #1590e2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Modern numbering style */
+.contact-item::before {
+  counter-increment: sn;
+  content: counter(sn);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #3498db;
+  background: #d6eaf8;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Contact buttons inline */
+.contact-buttons {
+  margin-top: 10px;
+}
+
+.contact-buttons button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+/* Overlay for edit form */
+.contact-overlay {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Sliding animation */
+@keyframes slideIn {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.edit-form-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form-slide label {
+  font-weight: 600;
+  margin-top: 8px;
+  color: #1f3a50;
+}
+
+.edit-form-slide input {
+  width: 95%;
+  padding: 6px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+}
+
+.edit-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-buttons button {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
